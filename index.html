@@ -6,29 +6,62 @@
   <title>Tibet Fest am Lindenberg</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Gloock&display=swap');
-.accordion {
-  cursor: pointer;
-  padding: 15px;
-  width: 100%;
-  border: none;
-  outline: none;
-  text-align: left;
-  background-color: #f1c40f;
-  color: #000;
-  font-size: 1.2rem;
-  transition: background-color 0.3s ease;
-}
 
-.accordion:hover {
-  background-color: #d4ac0d;
-}
+    .accordion {
+      cursor: pointer;
+      padding: 15px 15px 15px 35px; /* mehr links wegen Pfeil */
+      width: 100%;
+      border: none;
+      outline: none;
+      text-align: left;
+      background-color: rgba(0,0,0,0); /* transparent */
+      color: black;
+      font-size: 1.2rem;
+      font-weight: bold;
+      font-family: Arial, sans-serif;
+      border-bottom: 2px solid black; /* unterstrichener Titel */
+      position: relative;
+      margin-top: 30px; /* größerer Abstand nach oben */
+      transition: background-color 0.3s ease;
 
-.panel {
-  padding: 0 15px;
-  display: none;
-  background-color: #fef9e7;
-  overflow: hidden;
-}
+      margin-bottom: 20px; 
+    }
+
+    /* Pfeil vor dem Titel */
+    .accordion::before {
+      content: "▾"; /* Pfeil nach unten */
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 1.2rem;
+      transition: transform 0.3s ease;
+    }
+
+    /* Pfeil drehen wenn aktiv */
+    .accordion.active::before {
+      transform: translateY(-50%) rotate(180deg); /* Pfeil zeigt nach oben */
+    }
+
+    .accordion:hover {
+      background-color: rgba(0,0,0,0.05);
+    }
+
+    .panel {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease;
+      background-color: rgba(0,0,0,0); /* transparent */
+      color: black;
+      padding: 0 15px;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    .panel.open {
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
 
     html, body {
       height: 100%;
@@ -100,7 +133,7 @@
       flex-grow: 1;
       max-width: 700px;
       margin: 130px auto 0 auto;
-      padding: 0 20px 200px 20px; /* größerer Abstand nach unten */
+      padding: 0 20px 200px 20px;
     }
 
     main.content h2 {
@@ -166,69 +199,67 @@
     <nav>
       <a href="TibetFestAmLindenberg.pdf" target="_blank">Flyer</a>
       <a href="#Kontakt">Kontakt</a>
-</nav>
-
+    </nav>
   </header>
 
   <main class="content">
-    
-      <h2>About Us</h2>
-      <p>Das Tibet Fest am Lindenberg ist ein kulturelles Ereignis, das tibetische Tradition, Musik und Gemeinschaft zelebriert. Es wird vom lokalen tibetischen Verein organisiert und findet im Herzen von Basel statt.</p>
-	  
-   
-      <h2>Kontakt</h2>
-      <p>Email: info.lindenbergfest.com (z.B) </p>
-      <p>Telefon: +xx xx xxx xx xx</p>
-      <p>Adresse: Kath. Pfarreizentrum St. Clara, Lindenberg 8, 4058 Basel</p>
 
-      <div class="map-container">
-       <iframe 
-  	src="https://www.google.com/maps?q=Kath.+Pfarreizentrum+St.+Clara,+Lindenberg+8,+4058+Basel&output=embed" 
-  	width="100%" 
-  	height="400" 
-  	style="border:0;" 
-  	allowfullscreen="" 
-  	loading="lazy" 
-  	referrerpolicy="no-referrer-when-downgrade">
-	</iframe>
+    <h2>About Us</h2>
+    <p>Das Tibet Fest am Lindenberg ist ein kulturelles Ereignis, das tibetische Tradition, Musik und Gemeinschaft zelebriert. Es wird vom lokalen tibetischen Verein organisiert und findet im Herzen von Basel statt.</p>
 
-<h2>Häufige Fragen</h2>
+    <h2>Kontakt</h2>
+    <p>Email: info.lindenbergfest.com (z.B) </p>
+    <p>Telefon: +xx xx xxx xx xx</p>
+    <p>Adresse: Kath. Pfarreizentrum St. Clara, Lindenberg 8, 4058 Basel</p>
 
-<button class="accordion">Was erwartet mich beim Fest?</button>
-<div class="panel">
-  <p>Traditionelle tibetische Musik, leckeres Essen, kulturelle Darbietungen und eine warme Gemeinschaft.</p>
-</div>
+    <div class="map-container">
+      <iframe 
+        src="https://www.google.com/maps?q=Kath.+Pfarreizentrum+St.+Clara,+Lindenberg+8,+4058+Basel&output=embed" 
+        width="100%" 
+        height="400" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
 
-<button class="accordion">Ist der Eintritt kostenlos?</button>
-<div class="panel">
-  <p>Ja, der Eintritt ist frei! Spenden sind willkommen.</p>
-</div>
+    <h2>Weitere Informationen</h2>
 
-      </div>
+    <button class="accordion">Was erwartet mich beim Fest?</button>
+    <div class="panel">
+      <p>Traditionelle tibetische Musik, leckeres Essen, kulturelle Darbietungen und Gewinnspiele wie Bazar und Tombola.</p>
+    </div>
+
+    <button class="accordion">Ist der Eintritt kostenlos?</button>
+    <div class="panel">
+      <p>Ja, der Eintritt ist frei! Spenden sind herzlich willkommen.</p>
+    </div>
 
   </main>
-	
- <section id="Kontakt">
-  <footer>
-    Kontakt: email | Tel: +xx xx xxx xx xx | Lindenberg 8, 4058 Basel
-  </footer>
- </section>
 
- <script>
-  const accordions = document.querySelectorAll('.accordion');
-  accordions.forEach(btn => {
-    btn.addEventListener('click', () => {
-      btn.classList.toggle('active');
-      const panel = btn.nextElementSibling;
-      if (panel.style.display === 'block') {
-        panel.style.display = 'none';
-      } else {
-        panel.style.display = 'block';
-      }
+  <section id="Kontakt">
+    <footer>
+      Kontakt: email | Tel: +xx xx xxx xx xx | Lindenberg 8, 4058 Basel
+    </footer>
+  </section>
+
+  <script>
+    const accordions = document.querySelectorAll('.accordion');
+    accordions.forEach(btn => {
+      btn.addEventListener('click', () => {
+        btn.classList.toggle('active');
+        const panel = btn.nextElementSibling;
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+          panel.classList.remove('open');
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+          panel.classList.add('open');
+        }
+      });
     });
-  });
- </script>
+  </script>
 
 </body>
 </html>
-

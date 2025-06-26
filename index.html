@@ -109,18 +109,18 @@
       box-sizing: border-box;
       z-index: 1100;
       background: transparent;
-      color: #f1c40f;    
+      color: white; /* header text color changed to white */
     }
 
     header h1 {
       font-family: 'Gloock', serif;
       font-size: 3rem;
       margin: 0;
-      color: #1E3A8A;
+      color: white; /* header title color changed to white */
     }
 
     nav a {
-      color: #1E3A8A;
+      color: white; /* nav links color changed to white */
       text-decoration: none;
       margin-left: 25px;
       font-weight: bold;
@@ -129,7 +129,7 @@
     }
 
     nav a:hover {
-      color: #3B82F6; /* ein helleres Blau beim Hover */
+      color: #ddd; /* lighter color on hover */
     }
 
     main.content {
@@ -193,26 +193,25 @@
         padding: 50px 10px;
       }
       
-     .benefiz-info {
-       margin-top: 40px;
-       color: #f1c40f; /* deine neue Textfarbe */
-       font-family: Arial, sans-serif;
-       line-height: 1.5;
-       max-width: 700px;
-       border-left: 5px solid #f1c40f; /* Akzent */
-       padding-left: 15px;
-       border-radius: 0;
-     }
-     .benefiz-info h2 {
-       font-family: 'Gloock', serif;
-       font-size: 1.8rem;
-       margin-bottom: 0.8rem;
-    }
-    .benefiz-info p {
-       margin: 0.3rem 0;
-       font-size: 1.1rem;
-}
-
+      .benefiz-info {
+        margin-top: 40px;
+        color: #f1c40f; /* deine neue Textfarbe */
+        font-family: Arial, sans-serif;
+        line-height: 1.5;
+        max-width: 700px;
+        border-left: 5px solid #f1c40f; /* Akzent */
+        padding-left: 15px;
+        border-radius: 0;
+      }
+      .benefiz-info h2 {
+        font-family: 'Gloock', serif;
+        font-size: 1.8rem;
+        margin-bottom: 0.8rem;
+      }
+      .benefiz-info p {
+        margin: 0.3rem 0;
+        font-size: 1.1rem;
+      }
     }
   </style>
 </head>
@@ -240,10 +239,10 @@
     <p>Samstag erwarten dich Kinderprogramm, Tänze, Ausstellungen und der Dokumentarfilm Exiltibeter zwischen zwei Kulturen.</p> 
     <p>Am Sonntag findet eine Langlebe-Zeremonie für den 14. Dalai Lama statt, dazu Gebete, Tanz und weitere Programmpunkte für Groß und Klein.</p>
 
-Der Erlös geht an die Tibeter Gemeinschaft NWS.</p>
+    <p>Der Erlös geht an die Tibeter Gemeinschaft NWS.</p>
 
     <h2>Kontakt</h2>
-    <p>Email: info.lindenbergfest.com (z.B) </p>
+    <p>Email: info.lindenbergfest.com (z.B)</p>
     <p>Telefon: +xx xx xxx xx xx</p>
     <p>Adresse: Kath. Pfarreizentrum St. Clara, Lindenberg 8, 4058 Basel</p>
 
@@ -271,24 +270,21 @@ Der Erlös geht an die Tibeter Gemeinschaft NWS.</p>
       <p>Ja, der Eintritt ist frei! Spenden sind herzlich willkommen.</p>
     </div>
 
-  <!-- ... dein bisheriger Content ... -->
+    <!-- Benefiz-Bereich vor dem Footer -->
+    <section class="benefiz-info">
+      <h2>Benefizveranstaltung</h2>
+      <p>Der Erlös ist zugunsten der Tibeter Gemeinschaft NWS</p>
+      <p><strong>IBAN:</strong> CH53 0900 0000 6189 3271 8</p>
+      <p><strong>Präsident:</strong> Ngoritso Passang Dawa</p>
+      <p><strong>Veranstalter:</strong> Tibeter Gemeinschaft NWS, GSTF Sektion NWS</p>
+    </section>
+  </main>
 
-  <!-- Benefiz-Bereich vor dem Footer -->
-  <section class="benefiz-info">
-    <h2>Benefizveranstaltung</h2>
-    <p>Der Erlös ist zugunsten der Tibeter Gemeinschaft NWS</p>
-    <p><strong>IBAN:</strong> CH53 0900 0000 6189 3271 8</p>
-    <p><strong>Präsident:</strong> Ngoritso Passang Dawa</p>
-    <p><strong>Veranstalter:</strong> Tibeter Gemeinschaft NWS, GSTF Sektion NWS</p>
+  <section id="Kontakt">
+    <footer>
+      Kontakt: email | Tel: +xx xx xxx xx xx | Lindenberg 8, 4058 Basel
+    </footer>
   </section>
-</main>
-
-<section id="Kontakt">
-  <footer>
-    Kontakt: email | Tel: +xx xx xxx xx xx | Lindenberg 8, 4058 Basel
-  </footer>
-</section>
-
 
   <script>
     const accordions = document.querySelectorAll('.accordion');

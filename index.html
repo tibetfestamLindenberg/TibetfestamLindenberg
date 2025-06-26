@@ -9,26 +9,25 @@
 
     .accordion {
       cursor: pointer;
-      padding: 15px 15px 15px 35px; /* mehr links wegen Pfeil */
+      padding: 15px 15px 15px 35px;
       width: 100%;
       border: none;
       outline: none;
       text-align: left;
-      background-color: rgba(0,0,0,0); /* transparent */
-      color: #1E3A8A; /* dunkelblau */
+      background-color: rgba(0,0,0,0);
+      color: #1E3A8A;
       font-size: 1.2rem;
       font-weight: bold;
       font-family: Arial, sans-serif;
-      border-bottom: 2px solid #1E3A8A; /* unterstrichener Titel */
+      border-bottom: 2px solid #1E3A8A;
       position: relative;
-      margin-top: 30px; /* größerer Abstand nach oben */
+      margin-top: 30px;
       transition: background-color 0.3s ease;
       margin-bottom: 20px; 
     }
 
-    /* Pfeil vor dem Titel */
     .accordion::before {
-      content: "▾"; /* Pfeil nach unten */
+      content: "▾";
       position: absolute;
       left: 10px;
       top: 50%;
@@ -38,9 +37,8 @@
       color: #1E3A8A;
     }
 
-    /* Pfeil drehen wenn aktiv */
     .accordion.active::before {
-      transform: translateY(-50%) rotate(180deg); /* Pfeil zeigt nach oben */
+      transform: translateY(-50%) rotate(180deg);
     }
 
     .accordion:hover {
@@ -51,7 +49,7 @@
       max-height: 0;
       overflow: hidden;
       transition: max-height 0.4s ease;
-      background-color: rgba(0,0,0,0); /* transparent */
+      background-color: rgba(0,0,0,0);
       color: #1E3A8A;
       padding: 0 15px;
       font-family: Arial, sans-serif;
@@ -70,10 +68,9 @@
       font-family: Arial, sans-serif;
       display: flex;
       flex-direction: column;
-      color: #1E3A8A; /* Standardtext dunkelblau */
+      color: #1E3A8A;
     }
 
-    /* Hintergrundbild mit Abdunkelung */
     .background {
       position: fixed;
       top: 0;
@@ -81,19 +78,7 @@
       height: 100%;
       width: 100%;
       background: url('Tibet background.jpg') center center / cover no-repeat;
-      opacity: 0.7;
       filter: brightness(0.6);
-      z-index: -2;
-    }
-
-    /* Schwarzes Overlay für bessere Lesbarkeit */
-    .overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0,0,0,0.4);
       z-index: -1;
     }
 
@@ -120,18 +105,18 @@
       box-sizing: border-box;
       z-index: 1100;
       background: transparent;
-      color: white; /* Header-Text weiß */
+      color: white;
     }
 
     header h1 {
       font-family: 'Gloock', serif;
       font-size: 3rem;
       margin: 0;
-      color: white; /* Header-Text weiß */
+      color: white;
     }
 
     nav a {
-      color: #1E3A8A; /* Navigation bleibt dunkelblau */
+      color: #1E3A8A;
       text-decoration: none;
       margin-left: 25px;
       font-weight: bold;
@@ -140,7 +125,7 @@
     }
 
     nav a:hover {
-      color: #3B82F6; /* helleres Blau beim Hover */
+      color: #3B82F6;
     }
 
     main.content {
@@ -154,13 +139,13 @@
     main.content h2 {
       font-family: 'Gloock', serif;
       margin-top: 2rem;
-      color: white; /* Überschriften weiß */
+      color: white;
     }
 
     main.content p {
       line-height: 1.6;
       margin-bottom: 1rem;
-      color: #1E3A8A; /* Restlicher Text dunkelblau */
+      color: #1E3A8A;
     }
 
     .map-container {
@@ -203,33 +188,12 @@
         font-size: 1rem;
         padding: 50px 10px;
       }
-      
-     .benefiz-info {
-       margin-top: 40px;
-       color: #f1c40f; /* Akzentfarbe */
-       font-family: Arial, sans-serif;
-       line-height: 1.5;
-       max-width: 700px;
-       border-left: 5px solid #f1c40f; /* Akzent */
-       padding-left: 15px;
-       border-radius: 0;
-     }
-     .benefiz-info h2 {
-       font-family: 'Gloock', serif;
-       font-size: 1.8rem;
-       margin-bottom: 0.8rem;
-    }
-    .benefiz-info p {
-       margin: 0.3rem 0;
-       font-size: 1.1rem;
-    }
     }
   </style>
 </head>
 <body>
 
   <div class="background"></div>
-  <div class="overlay"></div>
   <div class="top-banner"></div>
 
   <header>
@@ -241,7 +205,6 @@
   </header>
 
   <main class="content">
-
     <h2>About Us</h2>
     <p>Tibet Kultur Fest Basel 2025</p>
     <p>08.–10. August | Lindenberg, Basel</p>
@@ -260,9 +223,6 @@
     <div class="map-container">
       <iframe 
         src="https://www.google.com/maps?q=Kath.+Pfarreizentrum+St.+Clara,+Lindenberg+8,+4058+Basel&output=embed" 
-        width="100%" 
-        height="400" 
-        style="border:0;" 
         allowfullscreen="" 
         loading="lazy" 
         referrerpolicy="no-referrer-when-downgrade">
@@ -281,13 +241,6 @@
       <p>Ja, der Eintritt ist frei! Spenden sind herzlich willkommen.</p>
     </div>
 
-    <section class="benefiz-info">
-      <h2>Benefizveranstaltung</h2>
-      <p>Der Erlös ist zugunsten der Tibeter Gemeinschaft NWS</p>
-      <p><strong>IBAN:</strong> CH53 0900 0000 6189 3271 8</p>
-      <p><strong>Präsident:</strong> Ngoritso Passang Dawa</p>
-      <p><strong>Veranstalter:</strong> Tibeter Gemeinschaft NWS, GSTF Sektion NWS</p>
-    </section>
   </main>
 
   <section id="Kontakt">

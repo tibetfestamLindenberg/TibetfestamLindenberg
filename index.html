@@ -15,11 +15,11 @@
       outline: none;
       text-align: left;
       background-color: rgba(0,0,0,0); /* transparent */
-      color: black;
+      color: #1E3A8A; /* dunkelblau */
       font-size: 1.2rem;
       font-weight: bold;
       font-family: Arial, sans-serif;
-      border-bottom: 2px solid black; /* unterstrichener Titel */
+      border-bottom: 2px solid #1E3A8A; /* unterstrichener Titel */
       position: relative;
       margin-top: 30px; /* größerer Abstand nach oben */
       transition: background-color 0.3s ease;
@@ -36,6 +36,7 @@
       transform: translateY(-50%);
       font-size: 1.2rem;
       transition: transform 0.3s ease;
+      color: #1E3A8A;
     }
 
     /* Pfeil drehen wenn aktiv */
@@ -44,7 +45,7 @@
     }
 
     .accordion:hover {
-      background-color: rgba(0,0,0,0.05);
+      background-color: rgba(30, 58, 138, 0.1);
     }
 
     .panel {
@@ -52,7 +53,7 @@
       overflow: hidden;
       transition: max-height 0.4s ease;
       background-color: rgba(0,0,0,0); /* transparent */
-      color: black;
+      color: #1E3A8A;
       padding: 0 15px;
       font-family: Arial, sans-serif;
       line-height: 1.6;
@@ -70,8 +71,8 @@
       font-family: Arial, sans-serif;
       display: flex;
       flex-direction: column;
-      color: #f1c40f;
-      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+      color: #1E3A8A; /* Hier die Textfarbe global geändert */
+      /* Text-Shadow entfernt, da es bei Dunkelblau nicht nötig ist */
     }
 
     .background {
@@ -108,25 +109,27 @@
       box-sizing: border-box;
       z-index: 1100;
       background: transparent;
+      color: #1E3A8A;
     }
 
     header h1 {
       font-family: 'Gloock', serif;
       font-size: 3rem;
       margin: 0;
-      color: #f1c40f;
+      color: #1E3A8A;
     }
 
     nav a {
-      color: #f1c40f;
+      color: #1E3A8A;
       text-decoration: none;
       margin-left: 25px;
       font-weight: bold;
       font-size: 1.1rem;
+      transition: color 0.3s ease;
     }
 
     nav a:hover {
-      color: #ffffff;
+      color: #3B82F6; /* ein helleres Blau beim Hover */
     }
 
     main.content {
@@ -134,22 +137,25 @@
       max-width: 700px;
       margin: 130px auto 0 auto;
       padding: 0 20px 200px 20px;
+      color: #1E3A8A;
     }
 
     main.content h2 {
       font-family: 'Gloock', serif;
       margin-top: 2rem;
+      color: #1E3A8A;
     }
 
     main.content p {
       line-height: 1.6;
       margin-bottom: 1rem;
+      color: #1E3A8A;
     }
 
     .map-container {
       margin-top: 2rem;
-      border: 2px solid #f1c40f;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      border: 2px solid #1E3A8A;
+      box-shadow: 0 0 10px rgba(30, 58, 138, 0.5);
     }
 
     iframe {
@@ -186,6 +192,27 @@
         font-size: 1rem;
         padding: 50px 10px;
       }
+      
+     .benefiz-info {
+       margin-top: 40px;
+       color: #f1c40f; /* deine neue Textfarbe */
+       font-family: Arial, sans-serif;
+       line-height: 1.5;
+       max-width: 700px;
+       border-left: 5px solid #f1c40f; /* Akzent */
+       padding-left: 15px;
+       border-radius: 0;
+     }
+     .benefiz-info h2 {
+       font-family: 'Gloock', serif;
+       font-size: 1.8rem;
+       margin-bottom: 0.8rem;
+    }
+    .benefiz-info p {
+       margin: 0.3rem 0;
+       font-size: 1.1rem;
+}
+
     }
   </style>
 </head>
@@ -235,6 +262,24 @@
     <div class="panel">
       <p>Ja, der Eintritt ist frei! Spenden sind herzlich willkommen.</p>
     </div>
+
+  <!-- ... dein bisheriger Content ... -->
+
+  <!-- Benefiz-Bereich vor dem Footer -->
+  <section class="benefiz-info">
+    <h2>Benefizveranstaltung</h2>
+    <p>Der Erlös ist zugunsten der Tibeter Gemeinschaft NWS</p>
+    <p><strong>IBAN:</strong> CH53 0900 0000 6189 3271 8</p>
+    <p><strong>Präsident:</strong> Ngoritso Passang Dawa</p>
+    <p><strong>Veranstalter:</strong> Tibeter Gemeinschaft NWS, GSTF Sektion NWS</p>
+  </section>
+</main>
+
+<section id="Kontakt">
+  <footer>
+    Kontakt: email | Tel: +xx xx xxx xx xx | Lindenberg 8, 4058 Basel
+  </footer>
+</section>
 
   </main>
 

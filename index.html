@@ -23,7 +23,6 @@
       position: relative;
       margin-top: 30px; /* größerer Abstand nach oben */
       transition: background-color 0.3s ease;
-
       margin-bottom: 20px; 
     }
 
@@ -71,10 +70,10 @@
       font-family: Arial, sans-serif;
       display: flex;
       flex-direction: column;
-      color: #1E3A8A; /* Hier die Textfarbe global geändert */
-      /* Text-Shadow entfernt, da es bei Dunkelblau nicht nötig ist */
+      color: #1E3A8A; /* Standardtext dunkelblau */
     }
 
+    /* Hintergrundbild mit Abdunkelung */
     .background {
       position: fixed;
       top: 0;
@@ -83,6 +82,18 @@
       width: 100%;
       background: url('Tibet background.jpg') center center / cover no-repeat;
       opacity: 0.7;
+      filter: brightness(0.6);
+      z-index: -2;
+    }
+
+    /* Schwarzes Overlay für bessere Lesbarkeit */
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.4);
       z-index: -1;
     }
 
@@ -109,19 +120,18 @@
       box-sizing: border-box;
       z-index: 1100;
       background: transparent;
-      /* Change all header text and links to white */
-      color: white !important;
+      color: white; /* Header-Text weiß */
     }
 
     header h1 {
       font-family: 'Gloock', serif;
       font-size: 3rem;
       margin: 0;
-      color: white !important;
+      color: white; /* Header-Text weiß */
     }
 
     nav a {
-      color: white !important;
+      color: #1E3A8A; /* Navigation bleibt dunkelblau */
       text-decoration: none;
       margin-left: 25px;
       font-weight: bold;
@@ -144,13 +154,13 @@
     main.content h2 {
       font-family: 'Gloock', serif;
       margin-top: 2rem;
-      color: #1E3A8A;
+      color: white; /* Überschriften weiß */
     }
 
     main.content p {
       line-height: 1.6;
       margin-bottom: 1rem;
-      color: #1E3A8A;
+      color: #1E3A8A; /* Restlicher Text dunkelblau */
     }
 
     .map-container {
@@ -196,7 +206,7 @@
       
      .benefiz-info {
        margin-top: 40px;
-       color: #f1c40f; /* deine neue Textfarbe */
+       color: #f1c40f; /* Akzentfarbe */
        font-family: Arial, sans-serif;
        line-height: 1.5;
        max-width: 700px;
@@ -219,6 +229,7 @@
 <body>
 
   <div class="background"></div>
+  <div class="overlay"></div>
   <div class="top-banner"></div>
 
   <header>
@@ -235,15 +246,14 @@
     <p>Tibet Kultur Fest Basel 2025</p>
     <p>08.–10. August | Lindenberg, Basel</p>
 
-    <p>Erlebe drei Tage tibetische Kultur mit Musik, Tanz, Filmen und kulinarischen Spezialitäten. </p>
+    <p>Erlebe drei Tage tibetische Kultur mit Musik, Tanz, Filmen und kulinarischen Spezialitäten.</p>
     <p>Am Freitag Abend gibt es tibetische Lieder und den Film The Great Distance Delivers Crane.</p>
     <p>Samstag erwarten dich Kinderprogramm, Tänze, Ausstellungen und der Dokumentarfilm Exiltibeter zwischen zwei Kulturen.</p> 
     <p>Am Sonntag findet eine Langlebe-Zeremonie für den 14. Dalai Lama statt, dazu Gebete, Tanz und weitere Programmpunkte für Groß und Klein.</p>
-
     <p>Der Erlös geht an die Tibeter Gemeinschaft NWS.</p>
 
     <h2>Kontakt</h2>
-    <p>Email: info.lindenbergfest.com (z.B) </p>
+    <p>Email: info.lindenbergfest.com (z.B)</p>
     <p>Telefon: +xx xx xxx xx xx</p>
     <p>Adresse: Kath. Pfarreizentrum St. Clara, Lindenberg 8, 4058 Basel</p>
 
@@ -271,7 +281,6 @@
       <p>Ja, der Eintritt ist frei! Spenden sind herzlich willkommen.</p>
     </div>
 
-    <!-- Benefiz-Bereich vor dem Footer -->
     <section class="benefiz-info">
       <h2>Benefizveranstaltung</h2>
       <p>Der Erlös ist zugunsten der Tibeter Gemeinschaft NWS</p>

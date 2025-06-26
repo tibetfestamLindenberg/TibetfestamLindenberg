@@ -9,25 +9,27 @@
 
     .accordion {
       cursor: pointer;
-      padding: 15px 15px 15px 35px;
+      padding: 15px 15px 15px 35px; /* mehr links wegen Pfeil */
       width: 100%;
       border: none;
       outline: none;
       text-align: left;
-      background-color: rgba(0,0,0,0);
-      color: #1E3A8A;
+      background-color: rgba(0,0,0,0); /* transparent */
+      color: #1E3A8A; /* dunkelblau */
       font-size: 1.2rem;
       font-weight: bold;
       font-family: Arial, sans-serif;
-      border-bottom: 2px solid #1E3A8A;
+      border-bottom: 2px solid #1E3A8A; /* unterstrichener Titel */
       position: relative;
-      margin-top: 30px;
+      margin-top: 30px; /* größerer Abstand nach oben */
       transition: background-color 0.3s ease;
+
       margin-bottom: 20px; 
     }
 
+    /* Pfeil vor dem Titel */
     .accordion::before {
-      content: "▾";
+      content: "▾"; /* Pfeil nach unten */
       position: absolute;
       left: 10px;
       top: 50%;
@@ -37,8 +39,9 @@
       color: #1E3A8A;
     }
 
+    /* Pfeil drehen wenn aktiv */
     .accordion.active::before {
-      transform: translateY(-50%) rotate(180deg);
+      transform: translateY(-50%) rotate(180deg); /* Pfeil zeigt nach oben */
     }
 
     .accordion:hover {
@@ -49,7 +52,7 @@
       max-height: 0;
       overflow: hidden;
       transition: max-height 0.4s ease;
-      background-color: rgba(0,0,0,0);
+      background-color: rgba(0,0,0,0); /* transparent */
       color: #1E3A8A;
       padding: 0 15px;
       font-family: Arial, sans-serif;
@@ -68,7 +71,8 @@
       font-family: Arial, sans-serif;
       display: flex;
       flex-direction: column;
-      color: #1E3A8A;
+      color: #1E3A8A; /* Hier die Textfarbe global geändert */
+      /* Text-Shadow entfernt, da es bei Dunkelblau nicht nötig ist */
     }
 
     .background {
@@ -78,7 +82,7 @@
       height: 100%;
       width: 100%;
       background: url('Tibet background.jpg') center center / cover no-repeat;
-      filter: brightness(0.6);
+      opacity: 0.7;
       z-index: -1;
     }
 
@@ -105,18 +109,18 @@
       box-sizing: border-box;
       z-index: 1100;
       background: transparent;
-      color: white;
+      color: white; /* header text color changed to white */
     }
 
     header h1 {
       font-family: 'Gloock', serif;
       font-size: 3rem;
       margin: 0;
-      color: white;
+      color: white; /* header title color changed to white */
     }
 
     nav a {
-      color: #1E3A8A;
+      color: white; /* nav links color changed to white */
       text-decoration: none;
       margin-left: 25px;
       font-weight: bold;
@@ -125,7 +129,7 @@
     }
 
     nav a:hover {
-      color: #3B82F6;
+      color: #ddd; /* lighter color on hover */
     }
 
     main.content {
@@ -139,7 +143,7 @@
     main.content h2 {
       font-family: 'Gloock', serif;
       margin-top: 2rem;
-      color: white;
+      color: #1E3A8A;
     }
 
     main.content p {
@@ -188,6 +192,26 @@
         font-size: 1rem;
         padding: 50px 10px;
       }
+      
+      .benefiz-info {
+        margin-top: 40px;
+        color: #f1c40f; /* deine neue Textfarbe */
+        font-family: Arial, sans-serif;
+        line-height: 1.5;
+        max-width: 700px;
+        border-left: 5px solid #f1c40f; /* Akzent */
+        padding-left: 15px;
+        border-radius: 0;
+      }
+      .benefiz-info h2 {
+        font-family: 'Gloock', serif;
+        font-size: 1.8rem;
+        margin-bottom: 0.8rem;
+      }
+      .benefiz-info p {
+        margin: 0.3rem 0;
+        font-size: 1.1rem;
+      }
     }
   </style>
 </head>
@@ -205,14 +229,16 @@
   </header>
 
   <main class="content">
+
     <h2>About Us</h2>
     <p>Tibet Kultur Fest Basel 2025</p>
     <p>08.–10. August | Lindenberg, Basel</p>
 
-    <p>Erlebe drei Tage tibetische Kultur mit Musik, Tanz, Filmen und kulinarischen Spezialitäten.</p>
+    <p>Erlebe drei Tage tibetische Kultur mit Musik, Tanz, Filmen und kulinarischen Spezialitäten. </p>
     <p>Am Freitag Abend gibt es tibetische Lieder und den Film The Great Distance Delivers Crane.</p>
     <p>Samstag erwarten dich Kinderprogramm, Tänze, Ausstellungen und der Dokumentarfilm Exiltibeter zwischen zwei Kulturen.</p> 
     <p>Am Sonntag findet eine Langlebe-Zeremonie für den 14. Dalai Lama statt, dazu Gebete, Tanz und weitere Programmpunkte für Groß und Klein.</p>
+
     <p>Der Erlös geht an die Tibeter Gemeinschaft NWS.</p>
 
     <h2>Kontakt</h2>
@@ -223,6 +249,9 @@
     <div class="map-container">
       <iframe 
         src="https://www.google.com/maps?q=Kath.+Pfarreizentrum+St.+Clara,+Lindenberg+8,+4058+Basel&output=embed" 
+        width="100%" 
+        height="400" 
+        style="border:0;" 
         allowfullscreen="" 
         loading="lazy" 
         referrerpolicy="no-referrer-when-downgrade">
@@ -241,6 +270,14 @@
       <p>Ja, der Eintritt ist frei! Spenden sind herzlich willkommen.</p>
     </div>
 
+    <!-- Benefiz-Bereich vor dem Footer -->
+    <section class="benefiz-info">
+      <h2>Benefizveranstaltung</h2>
+      <p>Der Erlös ist zugunsten der Tibeter Gemeinschaft NWS</p>
+      <p><strong>IBAN:</strong> CH53 0900 0000 6189 3271 8</p>
+      <p><strong>Präsident:</strong> Ngoritso Passang Dawa</p>
+      <p><strong>Veranstalter:</strong> Tibeter Gemeinschaft NWS, GSTF Sektion NWS</p>
+    </section>
   </main>
 
   <section id="Kontakt">

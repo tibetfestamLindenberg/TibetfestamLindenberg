@@ -6,6 +6,29 @@
   <title>Tibet Fest am Lindenberg</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Gloock&display=swap');
+.accordion {
+  cursor: pointer;
+  padding: 15px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  background-color: #f1c40f;
+  color: #000;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease;
+}
+
+.accordion:hover {
+  background-color: #d4ac0d;
+}
+
+.panel {
+  padding: 0 15px;
+  display: none;
+  background-color: #fef9e7;
+  overflow: hidden;
+}
 
     html, body {
       height: 100%;
@@ -169,6 +192,17 @@
   	referrerpolicy="no-referrer-when-downgrade">
 	</iframe>
 
+<h2>Häufige Fragen</h2>
+
+<button class="accordion">Was erwartet mich beim Fest?</button>
+<div class="panel">
+  <p>Traditionelle tibetische Musik, leckeres Essen, kulturelle Darbietungen und eine warme Gemeinschaft.</p>
+</div>
+
+<button class="accordion">Ist der Eintritt kostenlos?</button>
+<div class="panel">
+  <p>Ja, der Eintritt ist frei! Spenden sind willkommen.</p>
+</div>
 
       </div>
 
